@@ -38,7 +38,7 @@ $$
 
 ### 关于KV-Cache的实现
 
-![cachetree](C:\Users\wy04\Desktop\rust-llm\rust-llm\doc\figure\cachetree.png)
+![cachetree](C:\Users\wy04\Desktop\Rust-LLM\doc\figure\cachetree.png)
 
 当使用前缀树来管理全局缓存时，会话级别的本地KVCacheBlock中的所有token关联的KV在不再发生变化后，会尝试将它们合并到全局KVCache中。如果会话本地的最后一个缓存块与全局前缀树中的KVCache同步操作未能成功，将采取以下措施：
 
@@ -52,4 +52,4 @@ cd story-teller
 cargo r --release -- -m ../models/story/
 ```
 
-![story-telling](C:\Users\wy04\Desktop\rust-llm\rust-llm\doc\figure\story-telling.png)
+![story-telling](C:\Users\wy04\Desktop\Rust-LLM\doc\figure\story-telling.png)
