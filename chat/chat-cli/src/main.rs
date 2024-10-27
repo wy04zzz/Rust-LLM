@@ -20,7 +20,7 @@ struct Args {
     #[arg(short, long, default_value = "test_session_id")]
     id: String,
 
-    #[arg(short, long, default_value = "http://localhost:8081")]
+    #[arg(short, long, default_value = "http://localhost:8000")]
     service_url: String,
 }
 
