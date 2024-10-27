@@ -1,0 +1,24 @@
+[package]
+name = "chat-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lm-infer-core = { path = "../../core" }
+tokenizers = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+minijinja = "2.1.2"
+log = { workspace = true }
+env_logger = { workspace = true }
+half = { workspace = true }
+reqwest = "0.12.7"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0.86"
+getset = { workspace = true }
+
+[features]
+default = ["perf"]
+rayon = ["lm-infer-core/rayon"]
+perf = ["lm-infer-core/perf"]
